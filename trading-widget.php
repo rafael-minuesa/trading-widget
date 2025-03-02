@@ -18,6 +18,9 @@ define('TRADING_WIDGET_VERSION', '1.0.0');
 // Include required files
 require_once TRADING_WIDGET_PATH . 'includes/shortcodes.php';
 require_once TRADING_WIDGET_PATH . 'includes/enqueue-scripts.php';
+require_once TRADING_WIDGET_PATH . 'includes/admin/admin-menu.php';
+require_once TRADING_WIDGET_PATH . 'includes/admin/settings-page.php';
+require_once TRADING_WIDGET_PATH . 'includes/admin/settings-fields.php';
 
 // Plugin activation hook (optional)
 register_activation_hook(__FILE__, 'trading_widget_activate');
