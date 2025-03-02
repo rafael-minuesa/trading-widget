@@ -26,11 +26,13 @@ require_once TRADING_WIDGET_PATH . 'includes/admin/settings-fields.php';
 register_activation_hook(__FILE__, 'trading_widget_activate');
 function trading_widget_activate() {
     // Any activation tasks (flush rewrite rules, create DB tables, etc.)
+    // flush_rewrite_rules();
 }
 
 // Plugin deactivation hook (optional)
 register_deactivation_hook(__FILE__, 'trading_widget_deactivate');
 function trading_widget_deactivate() {
     // Any cleanup tasks
+    // flush_rewrite_rules();
 }
 ?>
