@@ -11,12 +11,12 @@ if (!defined('ABSPATH')) exit;
 
 <div class="trading-widget">
     <div class="widget-header">
-        <h2>Trade Assets</h2>
+        <h2><?php _e('Trade Assets', 'trading-widget'); ?></h2>
     </div>
     
     <div class="trading-pair">
         <div class="asset-selector" id="buy-asset">
-            <div class="asset-label">Buy</div>
+            <div class="asset-label"><?php _e('Buy', 'trading-widget'); ?></div>
             <select id="buy-select">
                 <option value="REAL8" data-icon="assets/icons/real8-icon.png">REAL8</option>
             </select>
@@ -29,7 +29,7 @@ if (!defined('ABSPATH')) exit;
         </div>
         
         <div class="asset-selector" id="sell-asset">
-            <div class="asset-label">Sell</div>
+            <div class="asset-label"><?php _e('Sell', 'trading-widget'); ?></div>
             <select id="sell-select">
                 <option value="XLM" data-icon="assets/icons/xlm-icon.png">XLM</option>
                 <option value="USDC" data-icon="assets/icons/usdc-icon.png">USDC</option>
@@ -40,7 +40,7 @@ if (!defined('ABSPATH')) exit;
         </div>
     </div>
     
-    <button class="trade-button" id="trade-button">Trade Now</button>
+    <button class="trade-button" id="trade-button"><?php _e('Trade Now', 'trading-widget'); ?></button>
 </div>
 
 <script src="assets/js/widget-icons.js"></script>
