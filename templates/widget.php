@@ -42,3 +42,5 @@ if (!defined('ABSPATH')) exit;
     
     <button class="trade-button" id="trade-button">Trade Now</button>
 </div>
+
+<script src="assets/js/widget-icons.js"></script>
