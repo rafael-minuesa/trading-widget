@@ -22,6 +22,26 @@ require_once TRADING_WIDGET_PATH . 'includes/admin/admin-menu.php';
 require_once TRADING_WIDGET_PATH . 'includes/admin/settings-page.php';
 require_once TRADING_WIDGET_PATH . 'includes/admin/settings-fields.php';
 
+// Add settings link to plugin page
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'trading_widget_add_plugin_page_settings_link');
+function trading_widget_add_plugin_page_settings_link($links) {
+    $links[] = '<a href="' . admin_url('admin.php?page=trading-widget-settings') . '">' . __('Settings') . '</a>';
+    return $links;
+}
+
+// Add menu entry to WordPress admin menu
+add_action('admin_menu', 'trading_widget_add_admin_menu');
+function trading_widget_add_admin_menu() {
+    add_menu_page(
+        __('Trading Widget Settings', 'trading-widget'),
+        __('Trading Widget', 'trading-widget'),
+        'manage_options',
+        'trading-widget-settings',
+        'trading_widget_settings_page',
+        'dashicons-chart-line'
+    );
+}
+
 // Plugin activation hook (optional)
 register_activation_hook(__FILE__, 'trading_widget_activate');
 function trading_widget_activate() {
