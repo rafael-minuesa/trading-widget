@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) exit;
     
     <div class="trading-pair">
         <div class="asset-selector" id="buy-asset">
-            <div class="asset-label">You Buy</div>
+            <div class="asset-label">Buy</div>
             <select id="buy-select">
                 <option value="REAL8" data-icon="assets/icons/real8-icon.png">REAL8</option>
             </select>
@@ -29,7 +29,7 @@ if (!defined('ABSPATH')) exit;
         </div>
         
         <div class="asset-selector" id="sell-asset">
-            <div class="asset-label">You Sell</div>
+            <div class="asset-label">Sell</div>
             <select id="sell-select">
                 <option value="XLM" data-icon="assets/icons/xlm-icon.png">XLM</option>
                 <option value="USDC" data-icon="assets/icons/usdc-icon.png">USDC</option>
