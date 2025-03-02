@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: REAL8 Trading Pair Widget
- * Description: A widget to select trading pairs for REAL8 and redirect to trading pages
+ * Description: A widget to select trading pairs for REAL8 and redirect to trading pages. Add the shortcode [trading_widget]
  * Version: 2.3
  * Author: ProWoos
  * Text Domain: trading-widget
