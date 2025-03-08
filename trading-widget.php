@@ -42,4 +42,11 @@ function trading_widget_deactivate() {
     // Any cleanup tasks
     // flush_rewrite_rules();
 }
+
+// Load plugin text domain
+function trading_widget_load_textdomain() {
+    load_plugin_textdomain( 'trading-widget', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'plugins_loaded', 'trading_widget_load_textdomain' );
+
 ?>
