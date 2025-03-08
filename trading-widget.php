@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: REAL8 Trading Pair Widget
- * Description: A widget to select trading pairs for REAL8 and redirect to trading pages. Add the shortcode [trading_widget]
- * Version: 3.2.1
+ * Description: A widget to select trading pairs for REAL8 and redirect to trading pages. shortcode [trading_widget]
+ * Version: 3.5.1
  * Author: ProWoos
  * Text Domain: trading-widget
  */
@@ -18,7 +18,7 @@ define('TRADING_WIDGET_VERSION', '1.0.0');
 // Include required files
 require_once TRADING_WIDGET_PATH . 'includes/shortcodes.php';
 require_once TRADING_WIDGET_PATH . 'includes/enqueue-scripts.php';
-require_once TRADING_WIDGET_PATH . 'includes/admin/admin-menu.php';
+require_once TRADING_WIDGET_PATH . 'includes/admin/admin-menu.php'; // Only this admin menu file
 require_once TRADING_WIDGET_PATH . 'includes/admin/settings-page.php';
 require_once TRADING_WIDGET_PATH . 'includes/admin/settings-fields.php';
 
@@ -27,19 +27,6 @@ add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'trading_widget_a
 function trading_widget_add_plugin_page_settings_link($links) {
     $links[] = '<a href="' . admin_url('admin.php?page=trading-widget-settings') . '">' . __('Settings') . '</a>';
     return $links;
-}
-
-// Add menu entry to WordPress admin menu
-add_action('admin_menu', 'trading_widget_add_admin_menu');
-function trading_widget_add_admin_menu() {
-    add_menu_page(
-        __('Trading Widget Settings', 'trading-widget'),
-        __('Trading Widget', 'trading-widget'),
-        'manage_options',
-        'trading-widget-settings',
-        'trading_widget_settings_page',
-        'dashicons-chart-line'
-    );
 }
 
 // Plugin activation hook (optional)
